@@ -2,7 +2,7 @@ function bubbleSort(arr) {
     const n = arr.length;
     let swapped;
   
-    // Loop through the array
+    // Looping through the array
     do {
       swapped = false; // Reset the swapped flag
       for (let i = 0; i < n - 1; i++) {

@@ -2,7 +2,7 @@ function netSalaryCalculator() {
     const basicSalary = parseFloat(prompt("Enter basic salary:")); // Basic Salary input
     const benefits = parseFloat(prompt("Enter benefits:")); // Benefits input
 
-    const grossSalary = basicSalary + benefits; // Gross Salary calculation
+    const grossSalary = basicSalary + benefits; // Formula for Gross Salary calculation
 
     // Calculate PAYE (Progressive Tax Brackets)
     let tax = 0;
@@ -18,7 +18,7 @@ function netSalaryCalculator() {
         tax = grossSalary * 0.35; // 35% tax
     }
 
-    // Calculate NHIF Deduction (based on gross salary)
+    // NHIF Deduction (based on gross salary)
     let nhifDeduction = 0;
     if (grossSalary <= 5999) {
         nhifDeduction = 150;
@@ -56,7 +56,7 @@ function netSalaryCalculator() {
         nhifDeduction = 1700;
     }
 
-    // Calculate NSSF Deduction (6% contribution)
+    // NSSF Deduction (6% contribution)
     let nssfDeduction = 0;
     if (grossSalary <= 7000) {
         nssfDeduction = grossSalary * 0.06;
@@ -67,11 +67,11 @@ function netSalaryCalculator() {
     // Housing Levy (1.5% of gross salary starting March 2024)
     const housingLevy = grossSalary * 0.015;
 
-    // Calculate Net Salary
+    // Net Salary
     const totalDeductions = tax + nhifDeduction + nssfDeduction + housingLevy;
     const netSalary = grossSalary - totalDeductions;
 
-    // Output the breakdown
+    // Output of the breakdown
     console.log(`Gross Salary: ${grossSalary}`);
     console.log(`Tax Deduction: ${tax}`);
     console.log(`NHIF Deduction: ${nhifDeduction}`);
