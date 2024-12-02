@@ -15,7 +15,7 @@ function studentGradesGenerator() {
             console.log("Grade: E"); // Marks less than 40
         }
     } else {
-        console.log("Invalid input. Please enter marks between 0 and 100."); // Handle invalid input
+        console.log("Incorrect input. Please enter marks between 0 and 100."); // Handle invalid input
     }
 }
 
