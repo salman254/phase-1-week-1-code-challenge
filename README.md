@@ -1,3 +1,4 @@
+<<<<<<< UPDATED README
 Phase 1 Week 1 Code Challenge
 Overview
 This repo contains solutions for the Code Challenge which includes four tasks:
@@ -102,3 +103,6 @@ I made a const for the total deductions and calculated the totals then another c
 
 - Output of the results
 console log all the calculations we have done for debbuging and verification of calculations.
+=======
+
+>>>>>>> 8564703c437178437d0b3caea444881bdeb335e6
