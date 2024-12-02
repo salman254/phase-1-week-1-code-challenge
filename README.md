@@ -1,10 +1,9 @@
 Phase 1 Week 1 Code Challenge
 Overview
 This repo contains solutions for the Code Challenge which includes four tasks:
-Extra Practice (Bubble Sort, Staircase, Cylinder Volume)
-Net Salary Calculator
-Speed Detector
 Student Grade Generator
+Speed detector
+net salary calculator
 
 SOLUTIONS FOR THE CODEGRADE 
 1. **STUDENT GRADE GENERATOR**
@@ -103,29 +102,3 @@ I made a const for the total deductions and calculated the totals then another c
 
 - Output of the results
 console log all the calculations we have done for debbuging and verification of calculations.
-
-4. **extra-practice**
-**Bubble sort**
-**Question**
-Write a function that takes an array of numbers as input. It should output an array of those same numbers sorted from lowest to highest.
-
-sample input = [5,6,1,3,4,2]
-Expected output = [1,2,3,4,5,6]
-
-**Solution**
-We need a function that takes an array of numbers and returns the array from the lowest number to the highest number.
-
-- We need to create a function with an array as an input taking the parameter array then get the length of the array using array.length
-
-- We need to declare a swapped variable which will be used to track if any elements are swapped i.e let swapped;
-
-- We need an outer loop (do) which will ensure that the array is continously scanned and elements are swapped until the array is fully sorted
-
-- Inside the outer loop we reset the swapped that we declared equating it to false
-
-- We need an inner loop (for) which will compare each element with the next one
-
-
-
-
-
