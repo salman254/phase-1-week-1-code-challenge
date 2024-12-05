@@ -1,8 +1,14 @@
-function studentGradesGenerator() {
-    const marks = prompt("Enter student marks (0-100):"); // Prompt the user for input
-    const marksInt = parseInt(marks); // Convert the string input to a number
+const readline = require('readline');
 
-    if (marksInt >= 0 && marksInt <= 100) { // To validate the input before proceeding to assign grades
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+function studentGradesGenerator(marks) {
+    const marksInt = parseInt(marks); // Convert the string input to an integer
+
+    if (marksInt >= 0 && marksInt <= 100) { // Validate the input
         if (marksInt > 79) {
             console.log("Grade: A"); // Marks greater than 79
         } else if (marksInt >= 60) {
@@ -19,4 +25,8 @@ function studentGradesGenerator() {
     }
 }
 
-
+// Prompt the user for input
+rl.question('Enter student marks (0-100): ', (marksInput) => {
+    studentGradesGenerator(marksInput); // To Call the function with user input
+    rl.close(); // To Close the readline interface
+});

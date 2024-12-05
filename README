@@ -16,12 +16,9 @@ Write a function that prompts the user to input student marks. The input should 
 **SOLUTION**
 You first need to understand the question and what it requires for instance the qn asks one to create an input in which there is student score that ranges from 0 - 100 and the output should correspond giving out a grade for each case.
 
-- To create the prompt, you first need a function for my case i named it studentGradeGenerator and then a local variable needs to be declared for my case the marks needed to be declared i declared the marks using const then using the inbuilt js prompt and writing "Enter student marks (0-100):". Since the inbuilt js prompt is a string and we want a value in number i used parseInt and stored a new variable marksInt
+- I created the prompt with the readline module to handle terminal-based input. The readline interface which is used to get input from the user and then parse the input to an integer using parseInt.
 
-function studentGradesGenerator() {
-    const marks = prompt("Enter student marks (0-100):"); 
-    const marksInt = parseInt(marks); 
-}
+To create the input, I used the readline interface instead of prompt, as prompt is not supported in Node.js. The method rl.question() was used to take user input and validate it to ensure it falls within the required range of 0 to 100.
 
 - Second step we need to deal with the output of the marks in this case we are going to validate the input before proceeding to assign grades.
 if (marksInt >= 0 && marksInt <= 100)
@@ -51,9 +48,9 @@ Write a program that takes the speed of a car as input e.g 80. If the speed is l
 
 - The question is quite similar to the previous question we are going to use the same formula to execute it. 
 
-First we need a function, a local variable, prompt and a parse 
-The function will be speedDetector, we use const to declare the speed and prompt it to say "Enter the speed of the car"
-we declare the speed again as speedInt and use parseInt to convert string to number.
+- First, I created a readline interface to handle the input from the terminal and used the method rl.question() to prompt the user for speed input.
+
+- I used parseInt to convert the string input into a number. The program checks if the speed is below 70 and prints "Ok". If it is above 70, it calculates demerit points using the formula:
 
 According to the question , If the speed is less than 70, it should print “Ok”. Otherwise, for every 5 km/s above the speed limit (70), it should give the driver one demerit point and print the total number of demerit points.
 - We use if and else in our case so the first one is if the speed is less than 70 it should give output "OK" else we declare a new variable demerit points and give it the formula that it should use to deal with the demerit points.
@@ -69,8 +66,14 @@ Write a program whose major task is to calculate an individual’s Net Salary by
 **SOLUTION**
 According to the question we need 2 inputs, we need to calculate gross salary, PAYE calculation, NHIF Deduction calculation, NSSF Deduction Calculation, Housing Levy Calculation, Net Salary Calculation and output of the results.
 
-- Input 
-I have created 2 inputs one for basic salary and another one for the benefits input each having their own prompt. I used parseFloat to make the value in the prompt a floating - point decimal
+
+- Readline Input 
+I created a readline interface and used rl.question() to prompt the user for both basic salary and benefits input. I used parseFloat to convert the input values into floating-point numbers for calculations.
+
+- Net salary calculation 
+The formula of calculating the net salary is gross salary - total deductions.
+
+I made a const for the total deductions and calculated the totals then another const for net salary showcasing gross salary which was existing - total deductions.
 
 - Gross Salary 
 Here i calculated the gross salary using the formula gross salary = basic salary + benefits
@@ -95,13 +98,5 @@ Using the KRA table the housing levy was calculated as gross salary * 1.5%
 
 I used the variable const to declare the housing levy and then = gross salary * 0.015 as the formula
 
-- Net salary calculation 
-The formula of calculating the net salary is gross salary - total deductions.
-
-I made a const for the total deductions and calculated the totals then another const for net salary showcasing gross salary which was existing - total deductions.
 
 - Output of the results
-console log all the calculations we have done for debbuging and verification of calculations.
-=======
-
->>>>>>> 8564703c437178437d0b3caea444881bdeb335e6
